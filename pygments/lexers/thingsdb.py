@@ -52,7 +52,8 @@ class ThingsDBLexer(RegexLexer):
             # name constants
             (r'(FULL|USER|GRANT|CHANGE|JOIN|RUN|QUERY|'
              r'DEBUG|INFO|WARNING|ERROR|CRITICAL|'
-             r'NO_IDS|INT_MIN|INT_MAX|MATH_E|MATH_PI)\b', Name.Constant),
+             r'NO_IDS|INT_MIN|INT_MAX|MATH_E|MATH_PI|'
+             r'WPO|HID|IDX)\b', Name.Constant),
 
             # regular expressions
             (r'(/[^/\\]*(?:\\.[^/\\]*)*/i?)', String.Regex),
@@ -75,7 +76,7 @@ class ThingsDBLexer(RegexLexer):
              r'one|clear|contains|ends_with|name|lower|replace|reverse|'
              r'starts_with|split|test|trim|trim_left|trim_right|upper|del|ren|'
              r'to_type|to_thing|get|id|keys|reduce|set|some|value|values|wrap|'
-             r'unshift|unwrap|search|set_name|bit_count)'
+             r'unshift|unwrap|search|set_name|bit_count|max|min)'
              r'(\()',
              bygroups(Name.Function, Name.Function, Punctuation), 'arguments'),
             (r'(alt_raise|assert|base64_encode|base64_decode|bool|bytes|'
