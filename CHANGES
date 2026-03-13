@@ -7,6 +7,26 @@ Version 2.20.0
 --------------
 (unreleased)
 
+- New lexers:
+
+  * Rell (#2914)
+
+- Updated lexers:
+
+  * LESS: Support single-line comments (#3005)
+  * LilyPond: Update to 2.25.29 (#2974)
+  * Tera Term macro: Add commands introduced in v5.3 through v5.6 (#2951)
+  * Python: Add ``t``-string support (#3009, #3010)
+  * TOML: Support TOML 1.1.0 (#3026)
+
+- Drop Python 3.8, and add Python 3.14 as a supported version (#2987, #3012)
+
+Version 2.19.2
+--------------
+(released June 21st, 2025)
+
+* Lua: Fix regression introduced in 2.19.0 (#2882, #2839)
+
 Version 2.19.1
 --------------
 (released January 6th, 2025)
@@ -60,7 +80,7 @@ Version 2.19.0
 * Add a color for ``Operator.Word`` to the ``rrt`` style (#2709)
 * Fix broken link in the documentation (#2803, #2804)
 * Drop executable bit where not needed (#2781)
-* Reduce Mojo priority relative to Python in ``analyze_text´` (#2771, #2772)
+* Reduce Mojo priority relative to Python in ``analyze_text`` (#2771, #2772)
 * Fix documentation builds (#2712)
 * Match example file names to the lexer's name (#2713, #2715)
 * Ensure lexer metadata is present (#2714)
